@@ -1,0 +1,60 @@
+[4:36 PM] Sayooj Panakkal
+==========================================
+
+Stereotype annotations
+
+======================
+
+@Component
+ 
+a]@controller
+
+b]@service
+
+c]@repository
+
+used to create Beans automatically in
+
+Application Context Spring IOC container
+
+@controller
+
+public class DemoController{
+
+  public String hello(){
+
+  return "hello controller"}
+
+}
+
+@Repository
+
+public class DemoRepository{
+
+  public String hello(){
+
+  return "hello repo"}
+
+}
+ 
+@Service
+
+public class DemoService{
+
+  public String hello(){
+
+  return "hello service"}
+
+}
+
+class Client{
+main(){
+
+  ApplicationContext applicationContext=new AnnotationConfigApplicationContext(confog.class);
+
+  DemoController demoController=applicationContext.getBean(DemoController.class)
+}
+}
+ 
+ 
+ 
